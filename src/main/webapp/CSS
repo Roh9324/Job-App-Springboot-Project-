@@ -1,1 +1,155 @@
+/* --- Global Styles & Typography --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e3e8ec; /* Slightly darker light gray for contrast */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    /* Subtle background texture for the Glassmorphism effect to stand out */
+    background-image: radial-gradient(#d3dbdf 1.5px, transparent 1.5px);
+    background-size: 30px 30px;
+}
 
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #007bff; /* Primary blue color */
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* --- Button Styling --- */
+.btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transition for both color and shadow */
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3); /* Shadow for lift */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4); /* Deeper shadow on hover */
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: 1px solid #6c757d;
+    margin-left: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+/* --- Card/Form Styling (for addjob.jsp) --- */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600; 
+    color: #333; 
+    font-size: 1.05em; 
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px; 
+    font-size: 1em;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    transition: border-color 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+/* --- Table Styling (for viewalljobs.jsp) --- */
+.job-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden; 
+}
+
+.job-table thead {
+    border-bottom: 3px solid #0056b3; 
+}
+
+.job-table th, .job-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.job-table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+/* Ensures the description text wraps and doesn't stretch the table too wide */
+.job-table td:nth-child(5) { 
+    max-width: 300px;
+    word-wrap: break-word; 
+}
+
+/* Stripe effect */
+.job-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa; 
+}
+
+.job-table tbody tr:hover {
+    background-color: #e9ecef; 
+    cursor: default;
+}
+
+/* --- Info/Alert Box --- */
+.alert-info {
+    background-color: #e6f7ff;
+    color: #007bff;
+    border: 1px solid #b3e3ff;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+}
